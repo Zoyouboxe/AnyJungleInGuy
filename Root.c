@@ -25,5 +25,6 @@ int main()
 
     printf("Init var = %.1lf\n", num);
     printf("Sqrt = %.10lf\n", guess);
-    printf("i = %d ", iteration);    
+    printf("i = %d ", iteration);
+    return 0;    
 }
