@@ -20,10 +20,10 @@ int main()
     Sleep(125);
     system("cls");
 
-    } while(fabs(guess != last));
+    } while(guess != last);
 
 
-    printf("Number = %.1lf\n", num);
-    printf("Root = %.10lf\n", guess);
-    printf("Used %d iterations", iteration);    
+    printf("Init var = %.1lf\n", num);
+    printf("Sqrt = %.10lf\n", guess);
+    printf("i = %d ", iteration);    
 }

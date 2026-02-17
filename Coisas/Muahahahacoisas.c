@@ -5,7 +5,7 @@
 
 int main()
 {
-    // Vers�o, variavel de loop e time.
+    // Versão, variavel de loop e time.
 
     char on = 'Y';
 
