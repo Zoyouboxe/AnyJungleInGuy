@@ -19,7 +19,7 @@ int main()
         // Menu Principal
         char menuascii[250] = "#####  #####  #####  #####  #####  #####\n#      #   #    #    #      #   #  #    \n#      #   #    #    #####  #####  #####\n#      #   #    #        #  #   #      #\n#####  #####  #####  #####  #   #  #####\n";
         int opt = 0;
-        for(int i = 0; menuascii[i] != '\0'; i++)
+        for (int i = 0; menuascii[i] != '\0'; i++)
         {
             printf("%c", menuascii[i]);
             Sleep(1);
@@ -29,8 +29,9 @@ int main()
         printf("\n1. Repetidor de String\n");
         printf("2. Somatorio\n");
         printf("3. Fibonacci\n");
-        printf("4. Calculadora de circulo?\n");
+        printf("4. Calculadora de circulo\n");
         printf("5. Calculadora\n");
+        printf("6. Calculadora de Raiz\n");
         printf("\nSelecione uma opcao: ");
         scanf(" %d", &opt);
         system("cls");
@@ -223,24 +224,26 @@ int main()
         case 6: // Root
         {
             double num = 0.0f;
-            printf("Choose a number: ");
+            printf("Escolha um Número: ");
             scanf(" %lf", &num);
             double guess = num / 2;
             int iteration = 0;
+            double last = 0.0f;
 
             do
             {
+                last = guess;
                 guess = (guess + (num / guess)) / 2;
                 iteration++;
-                printf("%.3lf", guess);
-                Sleep(125);
+                printf("%lf", guess);
+                Sleep(1);
                 system("cls");
 
-            } while (fabs(guess * guess - num) >= 0.0000000001);
+            } while (guess != last);
 
-            printf("Number = %.1lf\n", num);
+            printf("Init var = %.2lf\n", num);
             printf("Root = %.10lf\n", guess);
-            printf("Used %d iterations", iteration);
+            printf("i = %d", iteration);
             break;
         }
         default:

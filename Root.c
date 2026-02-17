@@ -17,7 +17,7 @@ int main()
     guess = (guess + (num / guess)) / 2;
     iteration++;
     printf("%lf", guess);
-    Sleep(125);
+    //Sleep(1000);
     system("cls");
 
     } while(guess != last);
