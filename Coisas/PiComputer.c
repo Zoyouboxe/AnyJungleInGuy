@@ -1,8 +1,9 @@
-    #include <stdio.h>
-    #include <math.h>
+#include <stdio.h>
+#include <math.h>
+#include <windows.h>
 
     int main()
-    {
+    {   
         const long double PI = 3.14159265358979323846;
         int acuracy; 
         printf("Acuracy: ");
