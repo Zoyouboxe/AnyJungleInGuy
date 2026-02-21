@@ -6,10 +6,11 @@
 
 int main()
 {
+    label:
     srand(time(NULL));
     static int tries, location, ran, ver1, ver2;
     int nums[11] = {0};
-    int tamanho = sizeof(nums) / sizeof(nums[0]);
+    int size = sizeof(nums) / sizeof(nums[0]);
     do{
     system("cls");
     printf("0: RS\n1: DF, GO, MS, MT, TO\n2: AC, AM, AP, PA, RO, RR\n3: CE, MA, PI\n4: AL, PB, PE, RN\n5: BA, SE\n6: MG\n7: ES, RJ\n8: SP\n9: PR, SC\nLocation: ");
@@ -19,7 +20,7 @@ int main()
     system("cls");
 
     do
-    {
+    {   
         int soma = 0;
         for (int i = 0; i < 9; i++)
         { // gera os 9 digitos
@@ -58,11 +59,14 @@ int main()
             nums[10] = (11 - (soma % 11));
         }
         tries++;
+
+
     } while (nums[8] != location);
+
         system("cls");
         // printf("%d\n", ver2);
 
-        for (int i = 0; i < tamanho; i++)
+        for (int i = 0; i < size; i++)
     {   
         if(i == 3 || i == 6){
             printf(".");
@@ -72,5 +76,6 @@ int main()
         printf("%d", nums[i]);
         Sleep(50);
     }
-   printf("\n%d Iteration.", tries);
+   (tries >= 2) ? printf("\n%d Iterations.", tries) : printf("%d Iteration", tries);
+    
 }
