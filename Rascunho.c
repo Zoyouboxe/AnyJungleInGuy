@@ -7,11 +7,16 @@
 int main()
 {
     srand(time(NULL));
-    static int tries, location, ran, ver1, ver2, a;
+    static int tries, location, ran, ver1, ver2;
     int nums[11] = {0};
     int tamanho = sizeof(nums) / sizeof(nums[0]);
-    printf("0: RS\n1: DF, GO, MS, MT, TO\n2: AC, AM, AP, PA, RO, RR\n3: CE, MA, PI\n4: AL, PB, PE, RN\n5: BA, SE\n6: MG\n7: ES, RJ\n8: SP\n9: PR, SC\nLocation:");
+    do{
+    system("cls");
+    printf("0: RS\n1: DF, GO, MS, MT, TO\n2: AC, AM, AP, PA, RO, RR\n3: CE, MA, PI\n4: AL, PB, PE, RN\n5: BA, SE\n6: MG\n7: ES, RJ\n8: SP\n9: PR, SC\nLocation: ");
     scanf("%d", &location);
+    }while(location < 0 || location > 9);
+
+    system("cls");
 
     do
     {
@@ -67,5 +72,5 @@ int main()
         printf("%d", nums[i]);
         Sleep(50);
     }
-   printf("\n%d", tries);
+   printf("\n%d Iteration.", tries);
 }
