@@ -5,7 +5,7 @@
 #include <math.h>
 
     // DISCLAIMER: Nem o doutor Victor Frankenstein olhou para sua criação e sentiu tanta repulsa e vergonha
-    // quanto eu sinto por esse código! Eu escrevi essa monstruosidade sem olhar para traz nenhuma vez
+    // quanto eu sinto por esse código! Eu escrevi essa monstruosidade sem olhar para traz se quer uma unica vez
     // e agora nem eu, o proprio criador, sei como ela funciona.
     // NÃO GASTE SEU TEMPO TENTANDO ENTENDER ESSA ABERRAÇÃO!!!!!!!!!!
 
@@ -21,7 +21,7 @@ int main(){
     }
 
     delta = vars[1] * vars[1] - 4.0 * vars[0] * vars[2];
-    printf("(%.2fX^2) + (%.2fX) + (%.2f) = 0\n", vars[0], vars[1], vars[2]);
+    printf("(%.0fX^2) + (%.0fX) + (%.0f) = 0\n", vars[0], vars[1], vars[2]);
     
     if(delta > 0){
         ans1 = (-vars[1] + sqrt(delta)) / (2 * vars[0]);
