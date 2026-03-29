@@ -92,7 +92,7 @@ int main()
                 break;
                 }
             default:
-                printf("\nOpção invalida!\n");
+                printf("\nOpï¿½ï¿½o invalida!\n");
                 Sleep(1500);
                 system("cls");
                 break;
@@ -103,4 +103,6 @@ int main()
     scanf(" %c", &persistence);
     system("cls");
     }
+
+    //que merda era pra ser isso?
 }

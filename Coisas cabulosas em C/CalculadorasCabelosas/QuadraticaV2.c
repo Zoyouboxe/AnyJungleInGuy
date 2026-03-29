@@ -4,6 +4,46 @@
 #include <stdbool.h>
 #include <math.h>
 
+int Delta(float a, float b, float c){
+    return (b * b) - (4 * a * c);
+}
+
+int main(){
+
+    float a, b, c;
+    float X1 = 0.0f, X2 = 0.0f;
+    char Real[50] = "", Complex[50] = "";
+    printf("A = ");
+    scanf("%f", &a);
+    printf("\nB = ");
+    scanf("%f", &b);
+    printf("\nC = ");
+    scanf("%f", &c);
+    
+    
+    if(Delta(a, b, c) == 0){
+        X1 = (-b) / (2 * a);
+        printf("%f", X1);
+    }else if(Delta(a, b, c) > 0){
+        X1 = (((-b) + sqrt(Delta(a, b, c))) / (2 * a));
+        X2 = (((-b) - sqrt(Delta(a, b, c))) / (2 * a));
+        printf("%f & %f", X1, X2);
+    }else{
+        sprintf(&Real[0], "%.2f", (-b) / (2 * a));
+        sprintf(&Complex[0], "%.2f", (sqrt(fabs(Delta(a, b, c))) / (2 * a)));
+        printf("%s + %si & %s - %si", Real, Complex, Real, Complex);
+    }
+
+}   
+
+//original works
+
+/*#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+#include <stdbool.h>
+#include <math.h>
+
     // DISCLAIMER: Nem o doutor Victor Frankenstein olhou para sua criação e sentiu tanta repulsa e vergonha
     // quanto eu sinto por esse código! Eu escrevi essa monstruosidade sem olhar para traz se quer uma unica vez
     // e agora nem eu, o proprio criador, sei como essa merda funciona.
@@ -18,6 +58,7 @@ int main(){
         printf("%c = ", alpha[i]);
         scanf("%f", &vars[i]);
     }
+    (vars[0] == 0) ? printf("a != 0"), exit(1) : 0;
     delta = vars[1] * vars[1] - 4.0 * vars[0] * vars[2];
     printf("\n(%.0fX^2) + (%.0fX) + (%.0f) = 0\n\n", vars[0], vars[1], vars[2]);
     if(delta > 0){
@@ -35,4 +76,5 @@ int main(){
     //printf("%s\n%s\n%s\n%s", str1pt1, str1pt2, str2pt1, str2pt2);
     (delta == 0) ? printf("X = %.3f", ans1) : 0;
     (delta > 0) ? printf("X1 = %.3f\nX2 = %.3f", ans1, ans2) : printf("X1 = %s + %si\nX2 = %s - %si", str1pt1, str1pt2, str2pt1, str2pt2);
-}
+}*/
+ 

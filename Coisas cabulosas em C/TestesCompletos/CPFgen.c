@@ -2,13 +2,11 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <time.h>
-#include <stdbool.h>
 
 int main(){
 
     srand(time(NULL));
     int iteration = 0, location = 0;
-    bool debug = 1;
     int nums[11] = {0};
     int size = sizeof(nums) / sizeof(nums[0]);
 
@@ -21,29 +19,29 @@ int main(){
     system("cls");
 
         do{
-        int soma = 0;
+        int sum = 0;
 
         for (int i = 0; i < 9; i++){
             nums[i] = rand() % 10;
-            soma += nums[i] * (10 - i);
+            sum += nums[i] * (10 - i);
         }        
 
-        if (soma % 11 == 0 || soma % 11 == 1){
+        if (sum % 11 == 0 || sum % 11 == 1){
             nums[9] = 0;
         }else{
-            nums[9] = (11 - (soma % 11));
+            nums[9] = (11 - (sum % 11));
         }
 
-        soma = 0;
+        sum = 0;
 
         for (int i = 0; i < 10; i++){
-            soma += nums[i] * (11 - i);
+            sum += nums[i] * (11 - i);
         }
 
-        if (soma % 11 == 0 || soma % 11 == 1){
+        if (sum % 11 == 0 || sum % 11 == 1){
             nums[10] = 0;
         }else{
-            nums[10] = (11 - (soma % 11));
+            nums[10] = (11 - (sum % 11));
         }
 
         iteration++;
