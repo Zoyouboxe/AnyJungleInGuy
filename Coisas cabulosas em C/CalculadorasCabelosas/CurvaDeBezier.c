@@ -41,6 +41,7 @@ int main() {
     printf("Precision = ");
     scanf("%d", &n);
 
+    system("cls");
     printf("Desmos:\n");
     printf("(X, Y)\n(a, b)\n");
 
@@ -63,5 +64,4 @@ int main() {
     }
     printf("a = [%.2f, %.2f]\n", p0.x, p3.x);
     printf("b = [%.2f, %.2f]", p0.y, p3.y);
-    
 }   
